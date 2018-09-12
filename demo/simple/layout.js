@@ -25,18 +25,11 @@
   function init() {
     queryInput = document.getElementById("q");
     resultDiv = document.getElementById("result");
-    accessTokenInput = document.getElementById("access_token");
-    var setAccessTokenButton = document.getElementById("set_access_token");
-
-    queryInput.addEventListener("keydown", queryInputKeyDown);
-    setAccessTokenButton.addEventListener("click", setAccessToken);
-  }
-
-  function setAccessToken() {
-    document.getElementById("placeholder").style.display = "none";
-    document.getElementById("main-wrapper").style.display = "block";
+    accessTokenInput = '089aca5708ce49f8a717851f92540377'
     window.init(accessTokenInput.value);
+    queryInput.addEventListener("keydown", queryInputKeyDown);
   }
+
 
   function queryInputKeyDown(event) {
     if (event.which !== ENTER_KEY_CODE) {
@@ -87,8 +80,7 @@
   }
 
   function setResponseJSON(response) {
-    var node = document.getElementById("jsonResponse");
-    node.innerHTML = JSON.stringify(response, null, 2);
+console.log(JSON.stringify(response, null, 2));
   }
 
   function sendRequest() {

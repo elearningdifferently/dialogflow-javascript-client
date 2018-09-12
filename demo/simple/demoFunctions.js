@@ -23,7 +23,7 @@
 
 var client;
 window.init = function(token) {
-  client = new ApiAi.ApiAiClient({accessToken: token});
+  client = new ApiAi.ApiAiClient({accessToken: '089aca5708ce49f8a717851f92540377'});
 };
 
 function sendText(text) {
